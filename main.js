@@ -52,7 +52,7 @@ function atualizarTabela(){
 function atualizaNotaFinal() {
     const mediFinal = calculaMediaFinal();
 
-    document.getElementById('media-final-valor').innerHTML = mediFinal;
+    document.getElementById('media-final-valor').innerHTML = mediFinal.toFixed(2);
     document.getElementById('media-final-resultado').innerHTML = mediFinal >= notaMinima ? spanAprovado : spanReprovado;
 
 
@@ -61,7 +61,6 @@ function atualizaNotaFinal() {
 
 function calculaMediaFinal (){
     let somaDasNotas = 0;
-
     for (let i = 0; i< notas.length; i++){
         somaDasNotas += notas[i];
     }
